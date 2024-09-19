@@ -58,7 +58,7 @@
 
 	main {
 		margin: 0 auto;
-		padding: 0 20px;
+		padding: 0;
 	}
 
 	.container {
