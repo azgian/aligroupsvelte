@@ -79,7 +79,7 @@
 	}
 
 	.hero {
-		background-image: url('images/bgp1024x1024.jpg');
+		background-image: url('/images/bgp1024x1024.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		height: 100vh;
