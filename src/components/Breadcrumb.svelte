@@ -19,7 +19,7 @@
 
 <style>
 	.breadcrumb {
-		padding: 5px 0 0;
+		padding: 5px 0 0 15px;
 		/* background-color: #f8f9fa; */
 		max-width: 1200px;
 		margin: 0 auto;
