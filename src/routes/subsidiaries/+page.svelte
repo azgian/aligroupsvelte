@@ -61,7 +61,8 @@
 				<!-- <img src={subsidiary.logo} alt={`${subsidiary.name} 로고`} class="subsidiary-logo" /> -->
 				[로고 이미지]
 				<h2>{subsidiary.name}</h2>
-				<p>{subsidiary.description}</p>
+				<!-- <p>{subsidiary.description}</p> -->
+				<p>[간단한 정보 및 사이트 링크 등]</p>
 			</div>
 		{/each}
 	</section>
