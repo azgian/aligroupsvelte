@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumb from '../../components/Breadcrumb.svelte';
 	// Subsidiary 타입 정의
 	type Subsidiary = {
 		name: string;
@@ -40,6 +41,8 @@
 	}
 </script>
 
+<Breadcrumb path={['계열사']} />
+
 <main class="subsidiaries">
 	<section class="hero">
 		<h1>ALI GROUP 계열사</h1>
@@ -79,7 +82,7 @@
 	.hero {
 		text-align: center;
 		padding: 4rem 0;
-		background-color: #f0f0f0;
+		background-color: #385c74;
 		margin-bottom: 2rem;
 	}
 
@@ -90,7 +93,7 @@
 	}
 
 	.subsidiary-card {
-		background-color: #ffffff;
+		background-color: #607786;
 		border-radius: 8px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		padding: 1.5rem;

@@ -1,6 +1,8 @@
 <script lang="ts">
-	// 필요한 컴포넌트나 데이터를 여기에 import 하세요
+	import Breadcrumb from '../../components/Breadcrumb.svelte';
 </script>
+
+<Breadcrumb path={['회사 소개']} />
 
 <main class="about-us">
 	<section class="hero">
@@ -14,18 +16,17 @@
 	</section>
 
 	<section class="vision-mission">
-		<h2>비전 및 미션</h2>
 		<div class="vision">
-			<h3>비전</h3>
+			<h2>비전</h2>
 			<p>[ALI GROUP의 비전 문구]</p>
 		</div>
 		<div class="mission">
-			<h3>미션</h3>
+			<h2>미션</h2>
 			<p>[ALI GROUP의 미션 문구]</p>
 		</div>
 	</section>
 
-	<section class="core-values">
+	<!-- <section class="core-values">
 		<h2>핵심 가치</h2>
 		<ul>
 			<li>혁신</li>
@@ -33,7 +34,7 @@
 			<li>지속가능성</li>
 			<li>팀워크</li>
 		</ul>
-	</section>
+	</section> -->
 
 	<section class="business-areas">
 		<h2>주요 사업 영역</h2>
@@ -58,13 +59,13 @@
 	.hero {
 		text-align: center;
 		padding: 4rem 0;
-		background-color: #f0f0f0;
+		background-color: #385c74;
 	}
 
 	h1,
 	h2,
 	h3 {
-		color: #112240;
+		color: #8d9da7;
 	}
 
 	section {
