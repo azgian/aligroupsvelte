@@ -1,12 +1,34 @@
+<script lang="ts">
+	// Company 타입 정의
+	type Company = {
+		name: string;
+		siteUrl: string;
+	};
+
+	// .grid-item 클릭시 alert창
+	function handleClick(company: Company) {
+		alert(`${company.name.replace('<br>', '')} 홈페이지로 이동합니다.`);
+	}
+
+	// 계열사 명단을 객체 배열로 변경
+	const companies: Company[] = [
+		{ name: '㈜해리코스', siteUrl: 'https://example.com' },
+		{ name: '㈜더해리미디어', siteUrl: 'https://example.com' },
+		{ name: '알리파운데이션', siteUrl: 'https://example.com' },
+		{ name: '홍콩해리코스', siteUrl: 'https://example.com' },
+		{ name: '㈜알리베이<br>(거래소)', siteUrl: 'https://example.com' },
+		{ name: '㈜플러스셀바이오<br>(병원)', siteUrl: 'https://example.com' },
+		{ name: '중국백억유태신식자문유한공사<br>(줄기세포영업)', siteUrl: 'https://example.com' },
+		{ name: '알리에프엔비', siteUrl: 'https://example.com' }
+	];
+</script>
+
 <div class="grid">
-	<div class="grid-item">(주)해리코스</div>
-	<div class="grid-item">홍콩해리코스</div>
-	<div class="grid-item">알리파운데이션</div>
-	<div class="grid-item">(주)더해리미디어</div>
-	<div class="grid-item">(주)알리베이(거래소)</div>
-	<div class="grid-item">(주)플러스셀바이오(병원)</div>
-	<div class="grid-item">중국백억유태신식자문유한공사<br />(줌기세포 영업)</div>
-	<div class="grid-item">알리에프엔비</div>
+	{#each companies as company}
+		<button class="grid-item" on:click={() => handleClick(company)}>
+			{@html company.name}
+		</button>
+	{/each}
 </div>
 
 <style>
@@ -18,7 +40,8 @@
 
 	.grid-item {
 		background-color: #112240;
-		height: 100px; /* 높이를 80px로 설정 */
+		height: auto; /* 높이를 자동으로 조정 */
+		min-height: 100px; /* 최소 높이 설정 */
 		border-radius: 8px;
 		display: flex; /* Flexbox 사용 */
 		justify-content: center; /* 수평 중앙 정렬 */
@@ -28,10 +51,12 @@
 		padding: 10px; /* 내부 여백 추가 */
 		box-sizing: border-box; /* 패딩을 높이에 포함 */
 		font-size: 1.25rem;
+		color: aliceblue;
+		line-height: 1.3; /* 줄 간격 조정 */
 	}
 
 	.grid-item:hover {
-		transform: translateY(-10px);
+		transform: translateY(-5px);
 		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 		background-color: #3282b8; /* 밝은 푸른색 호버 효과 */
 	}

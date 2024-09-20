@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import Menu from '../components/Menu.svelte';
 	import SubsidiariesGrid from '../components/SubsidiariesGrid.svelte';
 
 	let heroSection;
@@ -10,9 +9,7 @@
 		const handleScroll = () => {
 			scrollY = window.pageYOffset;
 		};
-
 		window.addEventListener('scroll', handleScroll);
-
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
@@ -23,29 +20,19 @@
 
 <svelte:window bind:scrollY />
 
-<main>
-	<header>
-		<h1>ALI GROUP</h1>
-		<Menu />
-	</header>
+<section class="hero" bind:this={heroSection} style="background-position: center {yPos}px;">
+	<div class="hero-content">
+		<h2>Welcome to ALI GROUP</h2>
+		<p>A global company providing innovative business solutions</p>
+		<button>Learn More</button>
+	</div>
+</section>
 
-	<section class="hero" bind:this={heroSection} style="background-position: center {yPos}px;">
-		<div class="hero-content">
-			<h2>Welcome to ALI GROUP</h2>
-			<p>A global company providing innovative business solutions</p>
-			<button>Learn More</button>
-		</div>
-	</section>
-
-	<section class="subsidiaries container">
-		<h2>계열사</h2>
-		<SubsidiariesGrid />
-	</section>
-	<section class="etc"></section>
-	<footer class="container">
-		<p>© 2023 ALI GROUP. All rights reserved.</p>
-	</footer>
-</main>
+<section class="subsidiaries container">
+	<h2>계열사</h2>
+	<SubsidiariesGrid />
+</section>
+<div style="height:400px"></div>
 
 <style>
 	:global(body) {
@@ -56,26 +43,10 @@
 		color: #e6f1ff;
 	}
 
-	main {
-		margin: 0 auto;
-		padding: 0;
-	}
-
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
-
-	header {
-		background: #0f4c75; /* 더 진한 푸른색 헤더 */
-		padding: 1rem;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	}
-
-	h1 {
-		margin: 0;
-		text-align: center;
-		color: #fff;
+		padding: 0 15px;
 	}
 
 	.hero {
@@ -98,11 +69,12 @@
 		padding: 2rem;
 		border-radius: 10px;
 		z-index: 1;
+		color: #c0d6f7;
 	}
 
 	.hero h2 {
 		margin: 0;
-		font-size: 2.5em;
+		font-size: 2em;
 		color: #eee;
 	}
 
@@ -111,17 +83,18 @@
 	}
 
 	button {
-		background-color: #64ffda;
+		background-color: #64a2ff;
 		color: #0a192f;
 		border: none;
-		padding: 10px 20px;
+		border-radius: 10px;
+		padding: 15px 20px;
 		font-size: 1em;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 	}
 
 	button:hover {
-		background-color: #45c7b3;
+		background-color: #98bff8;
 	}
 
 	.subsidiaries {
@@ -130,14 +103,6 @@
 
 	.subsidiaries h2 {
 		text-align: center;
-		color: #64ffda;
-	}
-	.etc {
-		height: 500px;
-	}
-	footer {
-		text-align: center;
-		padding: 20px 0;
-		font-size: 1em;
+		color: #c0d6f7;
 	}
 </style>
