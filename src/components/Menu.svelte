@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let isMenuOpen = false;
 
@@ -30,8 +31,18 @@
 	</button>
 	<ul class:open={isMenuOpen}>
 		<li><a href="/" on:click={toggleMenu}>홈</a></li>
-		<li><a href="/aboutUs" on:click={toggleMenu}>회사 소개</a></li>
-		<li><a href="/subsidiaries" on:click={toggleMenu}>계열사</a></li>
+		<li>
+			<a href="/aboutUs" on:click={toggleMenu} class:active={$page.url.pathname === '/aboutUs'}
+				>회사 소개</a
+			>
+		</li>
+		<li>
+			<a
+				href="/subsidiaries"
+				on:click={toggleMenu}
+				class:active={$page.url.pathname === '/subsidiaries'}>계열사</a
+			>
+		</li>
 	</ul>
 </nav>
 
@@ -110,7 +121,11 @@
 	}
 
 	a:hover {
-		background: rgba(255, 255, 255, 0.3); /*#0a192f*/
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	a.active {
+		background: #0a192f;
 	}
 
 	@media (max-width: 768px) {
@@ -168,6 +183,10 @@
 		li a:hover {
 			background-color: rgba(255, 255, 255, 0.3);
 			text-decoration: none;
+		}
+
+		a.active {
+			background-color: #0a192f;
 		}
 	}
 </style>

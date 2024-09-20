@@ -58,7 +58,8 @@
 				tabindex="0"
 				role="button"
 			>
-				<img src={subsidiary.logo} alt={`${subsidiary.name} 로고`} class="subsidiary-logo" />
+				<!-- <img src={subsidiary.logo} alt={`${subsidiary.name} 로고`} class="subsidiary-logo" /> -->
+				[로고 이미지]
 				<h2>{subsidiary.name}</h2>
 				<p>{subsidiary.description}</p>
 			</div>
