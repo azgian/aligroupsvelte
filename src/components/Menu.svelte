@@ -1,9 +1,25 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	let isMenuOpen = false;
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
+
+	function handleResize() {
+		if (window.innerWidth > 768 && isMenuOpen) {
+			isMenuOpen = false;
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
 </script>
 
 <nav>
