@@ -3,10 +3,15 @@
 </script>
 
 <header>
-	<h1>
-		<a href="/">ALI GROUP</a>
-	</h1>
-	<Menu />
+	<div class="header-content">
+		<h1>
+			<a href="/">
+				<img src="/images/logo256.png" alt="ALI GROUP" class="logo" />
+				ALI GROUP
+			</a>
+		</h1>
+		<Menu />
+	</div>
 </header>
 
 <main>
@@ -19,16 +24,21 @@
 
 <style>
 	header {
-		background: #0f4c75;
+		background: linear-gradient(135deg, #133046, #365c75);
 		padding: 1rem;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		color: white;
 		position: sticky;
 		top: 0px;
 		z-index: 100;
+	}
+
+	.header-content {
 		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
 	h1 {
@@ -38,8 +48,16 @@
 	}
 
 	h1 a {
-		color: #fff;
+		display: flex;
+		align-items: center;
 		text-decoration: none;
+		color: #fff;
+	}
+
+	.logo {
+		height: 60px; /* 로고 크기를 조절하세요 */
+		width: auto;
+		margin-right: 15px;
 	}
 
 	main {
