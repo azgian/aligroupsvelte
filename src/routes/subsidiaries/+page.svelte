@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Breadcrumb from '../../components/Breadcrumb.svelte';
+	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 	// Subsidiary 타입 정의
 	type Subsidiary = {
 		name: string;

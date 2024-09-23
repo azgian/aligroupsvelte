@@ -1,13 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
-	import SubsidiariesGrid from '../components/SubsidiariesGrid.svelte';
+	import SubsidiariesGrid from '$lib/components/SubsidiariesGrid.svelte';
 
 	let heroSection;
 	let scrollY = 0;
 
 	onMount(() => {
 		const handleScroll = () => {
-			scrollY = window.pageYOffset;
+			scrollY = window.scrollY;
 		};
 		window.addEventListener('scroll', handleScroll);
 		return () => {

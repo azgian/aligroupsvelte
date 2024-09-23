@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Breadcrumb from '../../components/Breadcrumb.svelte';
+	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 </script>
 
 <Breadcrumb path={['회사 소개']} />
