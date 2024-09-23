@@ -8,6 +8,7 @@
 	<section class="hero">
 		<h1>ALI GROUP 소개</h1>
 		<p>혁신과 성장을 추구하는 글로벌 기업</p>
+		[배경 이미지]
 	</section>
 
 	<section class="company-overview">

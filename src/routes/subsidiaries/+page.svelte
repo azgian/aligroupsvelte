@@ -47,6 +47,7 @@
 	<section class="hero">
 		<h1>ALI GROUP 계열사</h1>
 		<p>혁신과 성장을 함께 이끄는 ALI GROUP의 다양한 계열사를 소개합니다.</p>
+		[배경이미지]
 	</section>
 
 	<section class="subsidiary-list">
