@@ -33,7 +33,11 @@
 	<ul class:open={isMenuOpen}>
 		{#each menuItems as item}
 			<li>
-				<a href={item.path} on:click={toggleMenu} class:active={$page.url.pathname === item.path}>
+				<a
+					href={item.path}
+					on:click={toggleMenu}
+					class:active={$page.url.pathname !== '/' && $page.url.pathname === item.path}
+				>
 					{item.name}
 				</a>
 			</li>
