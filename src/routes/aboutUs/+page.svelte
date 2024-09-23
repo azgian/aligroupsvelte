@@ -1,9 +1,3 @@
-<script lang="ts">
-	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
-</script>
-
-<Breadcrumb path={['회사 소개']} />
-
 <main class="about-us">
 	<section class="hero">
 		<h1>ALI GROUP 소개</h1>

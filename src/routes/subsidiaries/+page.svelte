@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 	// Subsidiary 타입 정의
 	type Subsidiary = {
 		name: string;
@@ -40,8 +39,6 @@
 		console.log(`${subsidiary.name} 클릭됨`);
 	}
 </script>
-
-<Breadcrumb path={['계열사']} />
 
 <main class="subsidiaries">
 	<section class="hero">

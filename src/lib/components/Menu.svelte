@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { menuItems } from '$lib';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
@@ -30,21 +31,13 @@
 		<span class:open={isMenuOpen}></span>
 	</button>
 	<ul class:open={isMenuOpen}>
-		<li>
-			<a href="/" on:click={toggleMenu}>홈</a>
-		</li>
-		<li>
-			<a href="/aboutUs" on:click={toggleMenu} class:active={$page.url.pathname === '/aboutUs'}
-				>회사 소개</a
-			>
-		</li>
-		<li>
-			<a
-				href="/subsidiaries"
-				on:click={toggleMenu}
-				class:active={$page.url.pathname === '/subsidiaries'}>계열사</a
-			>
-		</li>
+		{#each menuItems as item}
+			<li>
+				<a href={item.path} on:click={toggleMenu} class:active={$page.url.pathname === item.path}>
+					{item.name}
+				</a>
+			</li>
+		{/each}
 	</ul>
 </nav>
 

@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import Menu from '$lib/components/Menu.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	$: isHome = $page.url.pathname === '/';
 </script>
 
 <header>
@@ -13,6 +16,10 @@
 		<Menu />
 	</div>
 </header>
+
+{#if !isHome}
+	<Nav />
+{/if}
 
 <main>
 	<slot />
