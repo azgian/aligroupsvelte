@@ -27,6 +27,7 @@
 
 <footer>
 	<p>© 2023 ALI GROUP. All rights reserved.</p>
+	<p><a href="mailto:algc@algc.io">algc@algc.io</a></p>
 </footer>
 
 <style>
@@ -78,5 +79,13 @@
 		font-size: 1em;
 		background-color: #112240;
 		color: #c0d6f7;
+		height: 150px;
+	}
+	footer a {
+		color: #c0d6f7;
+		text-decoration: none;
+		border: solid 1px #c0d6f7;
+		padding: 5px;
+		border-radius: 5px;
 	}
 </style>
