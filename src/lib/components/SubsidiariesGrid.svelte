@@ -25,11 +25,17 @@
 		{
 			name: '알리파운데이션',
 			url: 'https://alifoundation.io/',
-			logo: 'logo_alifoundation.png',
+			logo: 'logo256.png',
 			logoWidth: 60
 		},
 		{ name: '홍콩해리코스', url: '' },
-		{ name: '㈜알리베이', url: '', description: '거래소' },
+		{
+			name: '㈜알리베이',
+			url: 'https://alibae.io/',
+			description: '거래소',
+			logo: 'logo_alibae.png',
+			logoWidth: 150
+		},
 		{
 			name: '㈜플러스셀바이오',
 			url: 'https://plusscbio.com',
