@@ -23,13 +23,13 @@
 <section class="hero" bind:this={heroSection} style="background-position: center {yPos}px;">
 	<div class="hero-content">
 		<h2>Welcome to ALI GROUP</h2>
-		<p>A global company providing innovative business solutions</p>
-		<button>Learn More</button>
+		<p>A global company providing<br />innovative business solutions</p>
+		<!-- <button>Learn More</button> -->
 	</div>
 </section>
 
 <section class="subsidiaries container">
-	<h2>계열사</h2>
+	<h2>Subsidiaries</h2>
 	<SubsidiariesGrid />
 </section>
 <div style="height:400px"></div>
@@ -50,7 +50,7 @@
 	}
 
 	.hero {
-		background-image: url('/images/bgp1024x1024.jpg');
+		background-image: url('/images/bgp1456x816.png');
 		background-size: cover;
 		background-repeat: no-repeat;
 		height: 100vh;

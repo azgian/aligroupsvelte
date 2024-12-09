@@ -2,18 +2,19 @@
 	import { page } from '$app/stores';
 	import Menu from '$lib/components/Menu.svelte';
 	import Nav from '$lib/components/Nav.svelte';
+	import { goto } from '$app/navigation';
 	$: isHome = $page.url.pathname === '/';
 </script>
 
 <header>
 	<div class="header-content">
-		<h1>
-			<a href="/">
-				<img src="/images/logo256.png" alt="ALI GROUP" class="logo" />
-				ALI GROUP
-			</a>
-		</h1>
-		<Menu />
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div class="logo-container" on:click={() => goto('/')}>
+			<img src="/images/logo256.png" alt="ALI GROUP" class="logo" />
+			<img src="/images/text_aligroup300.png" alt="ALI Group" class="logo-text" />
+		</div>
+		<!-- <Menu /> -->
 	</div>
 </header>
 
@@ -32,7 +33,7 @@
 
 <style>
 	header {
-		background: linear-gradient(135deg, #133046, #365c75);
+		background: linear-gradient(135deg, #133046, #4c6e85);
 		padding: 1rem;
 		color: white;
 		position: sticky;
@@ -49,23 +50,34 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		margin: 0;
-		font-size: 2rem;
-		padding-left: 30px;
-	}
-
-	h1 a {
+	.logo-container {
 		display: flex;
 		align-items: center;
-		text-decoration: none;
-		color: #fff;
+		cursor: pointer;
+		gap: 10px;
 	}
 
 	.logo {
-		height: 60px; /* 로고 크기를 조절하세요 */
+		height: 65px; /* 로고 크기를 조절하세요 */
 		width: auto;
-		margin-right: 15px;
+	}
+	.logo-text {
+		height: 55px;
+		width: auto;
+	}
+
+	@media (max-width: 768px) {
+		.header-content {
+			height: 50px;
+		}
+		.logo {
+			height: 45px; /* 로고 크기를 조절하세요 */
+			width: auto;
+		}
+		.logo-text {
+			height: 35px;
+			width: auto;
+		}
 	}
 
 	main {
