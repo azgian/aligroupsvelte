@@ -3,6 +3,7 @@
 		name: string;
 		url?: string;
 		logo?: string;
+		logoWidth?: number;
 		description?: string;
 	};
 
@@ -21,7 +22,12 @@
 	const companies: Company[] = [
 		{ name: '㈜해리코스', url: '' },
 		{ name: '㈜더해리미디어', url: '' },
-		{ name: '알리파운데이션', url: '' },
+		{
+			name: '알리파운데이션',
+			url: 'https://alifoundation.io/',
+			logo: 'logo_alifoundation.png',
+			logoWidth: 60
+		},
 		{ name: '홍콩해리코스', url: '' },
 		{ name: '㈜알리베이', url: '', description: '거래소' },
 		{
@@ -43,7 +49,12 @@
 			on:click={() => handleClick(company)}
 		>
 			{#if company.logo}
-				<img src={logoPath + company.logo} alt={company.name} class="logo" />
+				<img
+					src={logoPath + company.logo}
+					alt={company.name}
+					class="logo"
+					style={company.logoWidth ? `width: ${company.logoWidth}px;` : ''}
+				/>
 			{/if}
 			{company.name}
 			{#if company.description}
@@ -61,7 +72,7 @@
 	}
 
 	.grid-item {
-		background-color: #112240;
+		background-color: #284f94;
 		height: auto; /* 높이를 자동으로 조정 */
 		min-height: 100px; /* 최소 높이 설정 */
 		border-radius: 8px;
