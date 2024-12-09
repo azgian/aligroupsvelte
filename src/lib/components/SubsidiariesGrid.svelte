@@ -10,9 +10,9 @@
 	// .grid-item 클릭시 alert창
 	function handleClick(company: Company) {
 		if (company.url === '') {
-			alert(`${company.name.replace('<br>', '')} 준비중입니다.`);
+			alert(`${company.name} 준비중입니다.`);
 		} else {
-			if (confirm(`${company.name.replace('<br>', '')} 홈페이지로 이동합니다.`)) {
+			if (confirm(`${company.name} 홈페이지로 이동합니다.`)) {
 				window.open(company.url, '_blank', 'noopener,noreferrer');
 			}
 		}
