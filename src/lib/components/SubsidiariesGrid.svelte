@@ -7,7 +7,6 @@
 		description?: string;
 	};
 
-	// .grid-item 클릭시 alert창
 	function handleClick(company: Company) {
 		if (company.url === '') {
 			alert(`${company.name} 준비중입니다.`);
@@ -18,7 +17,6 @@
 		}
 	}
 
-	// 계열사 명단을 객체 배열로 변경
 	const companies: Company[] = [
 		{ name: '㈜해리코스', url: '' },
 		{ name: '㈜더해리미디어', url: '' },
@@ -79,22 +77,21 @@
 
 	.grid-item {
 		background-color: #284f94;
-		height: auto; /* 높이를 자동으로 조정 */
-		min-height: 100px; /* 최소 높이 설정 */
+		height: auto;
+		min-height: 150px;
 		border-radius: 8px;
-		display: flex; /* Flexbox 사용 */
+		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		justify-content: center; /* 수평 중앙 정렬 */
-		align-items: center; /* 수직 중앙 정렬 */
-		text-align: center; /* 텍스트 중앙 정�� (여러 줄일 경우) */
+		justify-content: center;
+		align-items: center;
+		text-align: center;
 		transition: background-color 0.3s ease;
-		padding: 10px; /* 내부 여백 추가 */
-		box-sizing: border-box; /* 패딩을 높이에 포함 */
+		padding: 10px;
+		box-sizing: border-box;
 		font-size: 1.05rem;
 		font-weight: 700;
 		color: aliceblue;
-		min-height: 150px;
 	}
 	.logo {
 		width: 200px;
@@ -108,7 +105,7 @@
 	.grid-item:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-		background-color: #3282b8; /* 밝은 푸른색 호버 효과 */
+		background-color: #3282b8;
 	}
 	.empty-url {
 		background-color: #454c58;
