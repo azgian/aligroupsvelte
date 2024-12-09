@@ -22,7 +22,7 @@
 
 <section class="hero" bind:this={heroSection} style="background-position: center {yPos}px;">
 	<div class="hero-content">
-		<h2>Welcome to ALI GROUP</h2>
+		<h2>Welcome to ALI Group</h2>
 		<p>A global company providing<br />innovative business solutions</p>
 		<!-- <button>Learn More</button> -->
 	</div>

@@ -11,7 +11,7 @@
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div class="logo-container" on:click={() => goto('/')}>
-			<img src="/images/logo256.png" alt="ALI GROUP" class="logo" />
+			<img src="/images/logo256.png" alt="ALI Group" class="logo" />
 			<img src="/images/text_aligroup300.png" alt="ALI Group" class="logo-text" />
 		</div>
 		<!-- <Menu /> -->
@@ -27,7 +27,7 @@
 </main>
 
 <footer>
-	<p>© 2023 ALI GROUP. All rights reserved.</p>
+	<p>© 2023 ALI Group. All rights reserved.</p>
 	<p><a href="mailto:algc@algc.io">algc@algc.io</a></p>
 </footer>
 
