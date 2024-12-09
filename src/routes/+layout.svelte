@@ -34,11 +34,13 @@
 <style>
 	header {
 		background: linear-gradient(135deg, #133046, #4c6e85);
+		opacity: 0.85;
 		padding: 1rem;
 		color: white;
-		position: sticky;
+		position: fixed;
 		top: 0px;
 		z-index: 100;
+		width: 100%;
 	}
 
 	.header-content {
@@ -48,6 +50,7 @@
 		align-items: center;
 		max-width: 1200px;
 		margin: 0 auto;
+		z-index: 110;
 	}
 
 	.logo-container {
